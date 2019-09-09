@@ -10,3 +10,6 @@ rm
 rm -r
 cat
 mv
+
+
+
