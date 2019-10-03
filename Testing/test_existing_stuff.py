@@ -22,5 +22,5 @@ def test_f_strings():
     assert f"hello{a}" == "hello5"
 
 # test .format()
-def test_format():
-    assert 
+# def test_format():
+    # assert 
