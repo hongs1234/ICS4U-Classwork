@@ -1,16 +1,28 @@
-# 3. Create a function that takes a list of words. 
-# Then create and return a dictionary where the key is 
-# the word and the value is how many times the word 
-# appears in the list.
-
 from typing import List
 
 
 def sum(a: int, b: int) -> int:
+    """Add two integers
+
+    Arg:
+        a: an integer
+        b: an integer
+    Returns:
+        The sum of two integers.
+    """
+
     return a + b
 
 
 def sum_of_list(numbers: List[int]) -> int:
+    """Give the sum of a list
+
+    Arg:
+        numbers: A list of integers
+    Returns:
+        The sum of all the integers in numbers.
+    """
+
     the_sum = 0
     for num in numbers:
         the_sum += num
@@ -19,10 +31,25 @@ def sum_of_list(numbers: List[int]) -> int:
 
 
 def dictionary_of_words(words: List[str]) -> dict:
-    a = words[0]
-    i = 0
+    """Create a dictionary
+
+    Arg:
+        words: a list of words
+    Returns:
+        A dictionary with a word as the key and the
+        number of times it appeared as the value.
+    """
+
+    occurances = {}
     for word in words:
-        if word == a:
-            i += 1
-    
-    return {a: i}
+        if word not in occurances.keys():
+            occurances[word] = 1
+        else:
+            occurances[word] += 1
+
+        # try:
+        #     occurances[word] += 1
+        # except KeyError:
+        #     occurances[word] = 1
+
+    return occurances
