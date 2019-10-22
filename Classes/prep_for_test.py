@@ -15,7 +15,7 @@ class Dog:
         self.happiness = happiness
     
     def eat(self, food):
-        pass
+        self.happiness += int((food.nutrition * 0.1))
 
     def bark():
         print("RUFF RUFF!")
@@ -24,6 +24,5 @@ class Dog:
         print(f"""Name: {name}
         Happiness: {happiness}""")
 
-dog = Dog()
-
-def main():
+food = Food("Bread", 6, 10)
+dog = Dog("Jok", "Dalmation", 5)
