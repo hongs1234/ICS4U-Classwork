@@ -1,3 +1,7 @@
+"""
+CLASS FIELDS
+"""
+
 from typing import List
 
 class Pizza:
@@ -31,9 +35,6 @@ class Pizza:
         return cls("Cheese", ["cheese"])
 
     def search_by_name(cls, name: str):
-        
-
-
 
 
 def main():
