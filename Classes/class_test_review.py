@@ -50,7 +50,8 @@ class Teacher:
     def assign_work(self, classes):
         pass
 
-    def greet(self)
+    def greet(self):
+        pass
 
 
 class Student:
@@ -64,6 +65,13 @@ class Student:
         greet() -> void
     """
 
+    def __init__(self, email_k12: str, student_num: int):
+        self.email_k12 = email_k12
+        self.student_num = student_num
+    
+    def greet(self):
+        pass
+
 
 class Class:
     """Class class
@@ -76,3 +84,13 @@ class Class:
         add_student(student) -> void
         reomve_student(student) -> void
     """
+
+    def __init__(self, subject: str, student_list: List[Student]):
+        self.subject = subject
+        self.student_list = student_list
+    
+    def add_student(self, student: Student):
+        pass
+
+    def reomve_student(self, student: Student):
+        pass
