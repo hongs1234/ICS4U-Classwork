@@ -25,7 +25,7 @@ class Person:
         pass
 
 
-class Teacher:
+class Teacher(Person):
     """Teacher Class
     
     Attributes:
@@ -54,7 +54,7 @@ class Teacher:
         pass
 
 
-class Student:
+class Student(Person):
     """Student Class
     
     Attributes:
