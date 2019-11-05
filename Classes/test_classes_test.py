@@ -2,7 +2,7 @@ import datetime
 
 import pytest
 
-from main import Classroom, Person, Student, Teacher
+from class_test_review import Classroom, Person, Student, Teacher
 
 
 
@@ -142,6 +142,16 @@ def test_teacher_init():
     assert teacher._email_k12 == "john.smith@ycdsb.ca"
     assert teacher._classes == []
 
+def test_teacher_getters_setters():
+    teacher = Teacher("John", "Smith", datetime.datetime(2020, 1, 1), 1234)
+    assert teacher.get_first_name() == "John"
+
+    teacher.set_OCT_PIN(5432)
+    assert teacher.get_OCT_PIN() == 5432
+
+    teacher.set_school("St. Joan")
+    assert teacher.get_school() == "St. Joan"
+
 def test_teacher_add_remove_class():
     teacher = Teacher("John", "Smith", datetime.datetime(2020, 1, 1), 1234)
     some_class = Classroom
@@ -151,7 +161,8 @@ def test_teacher_add_remove_class():
 
     teacher.remove_class(some_class)
     assert teacher.get_classes() == []
-    
+
+
 
 # EXTRA TESTS
 @pytest.mark.skip
