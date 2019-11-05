@@ -35,7 +35,7 @@ class Person:
         self._last_name = value
     
     def greet(self):
-        return f"Hello, my name is {self._first_name} {self._last_name}"
+        return f"Hello, my name is {self._first_name} {self._last_name}."
     
     def get_age(self):
         pass
@@ -145,7 +145,7 @@ class Student(Person):
 
 
 class Classroom:
-    """Classroom class
+    """Classroom Class
     
     Attributes:
         subject: str
