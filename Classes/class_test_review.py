@@ -57,7 +57,7 @@ class Teacher(Person):
         remove_class(class) -> void
     """
 
-    def __init__(self, first_name: str, last_name: str, DOB: str, OCT_pin: int,
+    def __init__(self, first_name: str, last_name: str, DOB: datetime, OCT_pin: int,
     school: str, email_k12: str, classes: List[Classroom]):
         super().__init__(first_name)
         super().__init__(last_name)
