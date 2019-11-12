@@ -14,7 +14,7 @@ class Sprite:
         self.y_speed = y_speed
 
     def draw(self):
-        arcade.draw_circle_filled(self.x, self.y, 25, arcade.color.BLUE)
+        arcade.draw_circle_filled(self.x, self.y, 25, arcade.color.BLACK)
     
     def update(self):
         self.x += self.x_speed
@@ -69,7 +69,7 @@ def on_key_release(key, modifiers):
 
 @window.event
 def on_mouse_press(x, y, button, modifiers):
-    pass
+    print(x, y, button, modifiers)
 
 
 if __name__ == '__main__':
