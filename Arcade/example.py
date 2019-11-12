@@ -6,12 +6,23 @@ HEIGHT = 480
 
 
 class Sprite:
-    def __init__(self, x: int, y: int):
+    def __init__(self, x: int, y: int, x_speed: int=0, y_speed: int=0):
         self.x = x
         self.y = y
+        self.x_speed = x_speed
+        self.y_speed = y_speed
+
+    def draw(self):
+        arcade.draw_circle_filled(self.x, self.y, 25, arcade.color.BLUE)
+    
+    def update(self):
+        self.x += self.x_speed
+        self.y += self.y_speed
 
 
 window = arcade.open_window(WIDTH, HEIGHT, "My Arcade Game")
+
+player = Sprite(200, 200, 1, 1)
 
 
 def setup():
@@ -21,17 +32,14 @@ def setup():
 
 
 def update(delta_time):
-    pass
+    player.update()
 
 
 @window.event
 def on_draw():
     arcade.start_render()
     # Draw in here...
-    player = Sprite(200, 200)
-
-
-    arcade.draw_circle_filled(player.x, player.y, 25, arcade.color.BLUE)
+    player.draw()
 
 
 @window.event
