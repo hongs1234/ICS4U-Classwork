@@ -1,5 +1,6 @@
 import arcade
 import random
+import math
 
 
 WIDTH = 640
@@ -7,14 +8,15 @@ HEIGHT = 480
 
 
 class Sprite:
-    def __init__(self, x: int, y: int, x_speed: int=0, y_speed: int=0):
+    def __init__(self, x: int, y: int, radius: int=25, x_speed: int=0, y_speed: int=0):
         self.x = x
         self.y = y
+        self.radius = radius
         self.x_speed = x_speed
         self.y_speed = y_speed
 
     def draw(self):
-        arcade.draw_circle_filled(self.x, self.y, 25, arcade.color.BLACK)
+        arcade.draw_circle_filled(self.x, self.y, self.radius, arcade.color.BLACK)
     
     def update(self):
         self.x += self.x_speed
@@ -69,7 +71,14 @@ def on_key_release(key, modifiers):
 
 @window.event
 def on_mouse_press(x, y, button, modifiers):
-    print(x, y, button, modifiers)
+    for s in sprites:
+        a = s.x - x
+        b = s.y - y
+        dist = math.sqrt(a**2 + b**2)
+
+        if dist < s.radius:
+            s.radius += 5
+            
 
 
 if __name__ == '__main__':
