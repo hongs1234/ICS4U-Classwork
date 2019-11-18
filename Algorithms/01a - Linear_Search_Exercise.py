@@ -28,7 +28,7 @@ def last_occurance(target: int, numbers: List[int]) -> int:
     """
 
     pass
-
+# len - 1 - i
 
 def every_occurance(target: int, numbers: List[int]) -> List:
     """Find every occurance of a number from a list
