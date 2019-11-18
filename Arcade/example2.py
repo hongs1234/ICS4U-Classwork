@@ -19,6 +19,8 @@ class MyGame(arcade.Window):
                                     center_x=200,
                                     center_y=200,
                                     scale=0.5)
+        
+        self.player.change_x = 1
 
     def on_draw(self):
         arcade.start_render()  # keep as first line
@@ -33,7 +35,7 @@ class MyGame(arcade.Window):
         Normally, you'll call update() on the sprite lists that
         need it.
         """
-        pass
+        self.player,updates()
 
     def on_key_press(self, key, key_modifiers):
         """
@@ -41,7 +43,9 @@ class MyGame(arcade.Window):
         For a full list of keys, see:
         http://arcade.academy/arcade.key.html
         """
-        pass
+        prnt(key, key_modifiers)
+        if key == arcade.key.D:
+            self.player.change_x = 1
 
     def on_key_release(self, key, key_modifiers):
         """
