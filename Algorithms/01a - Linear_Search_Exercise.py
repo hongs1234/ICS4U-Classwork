@@ -40,7 +40,13 @@ def every_occurance(target: int, numbers: List[int]) -> List:
         A list of indexes where the target occurs. An empty list if not found
     """
 
-    pass
+    index = []
+
+    for i, num, enumerate(numbers):
+        if num == target:
+            index.append(i)
+    
+    return index
 
 
 def first_string_occurance(target: str, words: List[str]) -> int:
