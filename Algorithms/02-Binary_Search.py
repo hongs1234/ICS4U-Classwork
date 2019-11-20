@@ -5,17 +5,16 @@ def binary_search(target: int, numbers: List[int]):
     end = len(numbers) - 1
     mid = (start + end) // 2
 
-    while start <= end:
-        if target > mid:
-            start = mid + 1
-        elif target < mid:
-            end = mid -1
-        elif target == mid:
-            print("Target found")
-            break
-        else:
-            print(f"Target not found. Number is between {mid-1} and {mid+1}")
-            break
+    if len(numbers) > 0:
+        while start <= end:
+            if target > mid:
+                start = mid + 1
+            elif target < mid:
+                end = mid -1
+            elif target == mid:
+                return"Target found"
+            else:
+                return f"Target not found. Number is between {mid-1} and {mid+1}"
 
 
 
