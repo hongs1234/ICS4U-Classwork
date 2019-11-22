@@ -1,20 +1,18 @@
 from typing import List
 
-def binary_search(target: int, numbers: List[int]):
-    start = 0
-    end = len(numbers) - 1
-    mid = (start + end) // 2
+def binary_search(target: int, numbers: List[int]) -> int:
+        start = 0
+        end = len(numbers) - 1
 
-    if len(numbers) > 0:
         while start <= end:
-            if target > mid:
+            mid = (start + end) // 2
+            if target > numbers[mid]:
                 start = mid + 1
-            elif target < mid:
+            elif target < numbers[mid]:
                 end = mid -1
-            elif target == mid:
-                return"Target found"
-            else:
-                return f"Target not found. Number is between {mid-1} and {mid+1}"
+            elif target == numbers[mid]:
+                return mid
+        return -1
 
 
 
