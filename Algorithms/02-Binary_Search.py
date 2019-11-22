@@ -6,12 +6,12 @@ def binary_search(target: int, numbers: List[int]) -> int:
 
         while start <= end:
             mid = (start + end) // 2
-            if target > numbers[mid]:
-                start = mid + 1
+            if target == numbers[mid]:
+                return mid
             elif target < numbers[mid]:
                 end = mid -1
-            elif target == numbers[mid]:
-                return mid
+            elif target > numbers[mid]:
+                start = mid + 1
         return -1
 
 
