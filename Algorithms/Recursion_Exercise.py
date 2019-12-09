@@ -53,9 +53,21 @@ def changePi(word: str):
 
 
 # noX
-def noX(word: str):
-    n = 0
-    if n == word[-1]:
-        return word
-    if word[n] == "x":
-        return noX(word[])
+# def noX(word: str):
+#     n = 0
+#     if n == word[-1]:
+#         return word
+#     if word[n] == "x":
+#         return noX(word[n+1:])
+#     else:
+#         return noX(word[n:])
+
+
+# array6
+def array6(nums: List[int], n: int):
+    if n > len(nums):
+        return False
+    if num[n] == 6:
+        return True
+    else:
+        return array6(nums, n + 1)
