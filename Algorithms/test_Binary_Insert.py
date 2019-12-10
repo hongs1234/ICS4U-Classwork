@@ -1,4 +1,4 @@
-
+from Binary_Insert import binary_insert
 
 def test_binary_insert():
     original = [1, 3, 5]
@@ -15,4 +15,8 @@ def test_binary_insert():
 
     original = [1, 3, 5]
     expected = [1, 2, 3, 5]
+    assert binary_insert(original, 2) == expected
+
+    original = []
+    expected = [2]
     assert binary_insert(original, 2) == expected
