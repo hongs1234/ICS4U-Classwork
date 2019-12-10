@@ -17,6 +17,6 @@ def test_binary_insert():
     expected = [1, 2, 3, 5]
     assert binary_insert(original, 2) == expected
 
-    original = []
-    expected = [2]
-    assert binary_insert(original, 2) == expected
+    original = [1, 3, 5]
+    expected = [0, 1, 3, 5]
+    assert binary_insert(original, 0) == expected

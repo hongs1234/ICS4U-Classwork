@@ -2,19 +2,18 @@ from typing import List
 
 
 def binary_insert(nums: List[int], target: int):
+    index = 0
     start = 0
     end = len(nums) - 1
 
     while start <= end:
         mid = (start + end) // 2
-        if target == nums[mid]:
-            nums.insert(mid, target)
-            return nums
-        elif target > nums[mid]:
-            start = mid + 1
-        elif target < nums[mid]:
+        if nums[mid] > target:
             end = mid - 1
+            index = mid
+        elif nums[mid] <= target:
+            start = mid + 1
+            index = start
     
-    if start > end:
-        nums.insert(start, target)
-        return nums
+    nums.insert(index, target)
+    return nums
