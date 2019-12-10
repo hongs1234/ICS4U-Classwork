@@ -1,3 +1,5 @@
+from typing import List
+
 # Fibonacci
 def fibonacci(num: int):
     if num == 0:
