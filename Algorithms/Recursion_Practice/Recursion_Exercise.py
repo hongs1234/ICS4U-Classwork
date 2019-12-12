@@ -53,13 +53,12 @@ def changePi(word: str):
 
 # noX
 def noX(word: str):
-    n = 0
-    if len(word) == n:
+    if len(word) <= 1:
         return ""
-    if word[n] == "x":
-        return noX(word[n+1:])
-    else:
-        return noX(word[n:])
+    a = word[0]
+    if a == "x":
+        return noX(word[1:])
+    return a + noX(word[1:])
 
 
 # array6
@@ -67,3 +66,23 @@ def array6(nums: List[int], n: int):
     if len(nums) == n:
         return 0
     return nums[n] == 6 or array6(nums, n + 1)
+
+# stringClean
+def stringClean(word: str):
+    if len(word) <= 1:
+        return word
+    a = word[0]
+    b = word[1]
+    if a == b:
+        return stringClean(word[1:])
+    return a + stringClean(word[1:])
+
+# strDist
+def strDist(word: str, substring: str):
+    if len(word) < len(substring):
+        return 0
+    if word.startswith(substring) and word.endswith(substring):
+        return len(word)
+    if word.startswith(substring):
+        return strDist(word[:-1], substring)
+    return strDist(word[1:], substring)
