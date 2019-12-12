@@ -66,10 +66,24 @@ def count8(n: int):
     return count8(n//10)
 
 # 09-powerN
+def powerN(base: int, n: int):
+    if n == 1:
+        return base
+    return base * powerN(base, n-1)
 
 # 10-countX
+def countX(word: str):
+    if len(word) == 0:
+        return 0
+    if word[0] == "x":
+        return 1 + countX(word[1:])
+    return countX(word[1:])
 
 # 11-countHi
+def countHi(word: str):
+    if len(word) == 0:
+        return 0
+
 
 # 12-changeXY 
 

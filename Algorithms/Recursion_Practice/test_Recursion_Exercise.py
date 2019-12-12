@@ -213,67 +213,157 @@ from Recursion_Exercise import *
 #     assert count7(99799) == 1
 
 
-# 08-count8
-def test_0():
-    assert count8(8) == 1
+# # 08-count8
+# def test_0():
+#     assert count8(8) == 1
 
-def test_1():
-    assert count8(818) == 2
+# def test_1():
+#     assert count8(818) == 2
 
-def test_2():
-    assert count8(8818) == 4
+# def test_2():
+#     assert count8(8818) == 4
 
-def test_3():
-    assert count8(8088) == 4
+# def test_3():
+#     assert count8(8088) == 4
 
-def test_4():
-    assert count8(123) == 0
+# def test_4():
+#     assert count8(123) == 0
 
-def test_5():
-    assert count8(81238) == 2
+# def test_5():
+#     assert count8(81238) == 2
 
-def test_6():
-    assert count8(88788) == 6
+# def test_6():
+#     assert count8(88788) == 6
 
-def test_7():
-    assert count8(8234) == 1
+# def test_7():
+#     assert count8(8234) == 1
 
-def test_8():
-    assert count8(2348) == 1
+# def test_8():
+#     assert count8(2348) == 1
 
-def test_9():
-    assert count8(23884) == 3
+# def test_9():
+#     assert count8(23884) == 3
 
-def test_10():
-    assert count8(0) == 0
+# def test_10():
+#     assert count8(0) == 0
 
-def test_11():
-    assert count8(1818188) == 5
+# def test_11():
+#     assert count8(1818188) == 5
 
-def test_12():
-    assert count8(8818181) == 5
+# def test_12():
+#     assert count8(8818181) == 5
 
-def test_13():
-    assert count8(1080) == 1
+# def test_13():
+#     assert count8(1080) == 1
 
-def test_14():
-    assert count8(188) == 3
+# def test_14():
+#     assert count8(188) == 3
 
-def test_15():
-    assert count8(88888) == 9
+# def test_15():
+#     assert count8(88888) == 9
 
-def test_16():
-    assert count8(9898) == 2
+# def test_16():
+#     assert count8(9898) == 2
 
-def test_17():
-    assert count8(78) == 1
+# def test_17():
+#     assert count8(78) == 1
 
 
 # # 09-powerN
+# def test_0():
+#     assert powerN(3, 1) == 3
+
+# def test_1():
+#     assert powerN(3, 2) == 9
+
+# def test_2():
+#     assert powerN(3, 3) == 27
+
+# def test_3():
+#     assert powerN(2, 1) == 2
+
+# def test_4():
+#     assert powerN(2, 2) == 4
+
+# def test_5():
+#     assert powerN(2, 3) == 8
+
+# def test_6():
+#     assert powerN(2, 4) == 16
+
+# def test_7():
+#     assert powerN(2, 5) == 32
+
+# def test_8():
+#     assert powerN(10, 1) == 10
+
+# def test_9():
+#     assert powerN(10, 2) == 100
+
+# def test_10():
+#     assert powerN(10, 3) == 1000
+
 
 # # 10-countX
+# def test_0():
+#     assert countX("xxhixx") == 4
 
-# # 11-countHi
+# def test_1():
+#     assert countX("xhixhix") == 3
+
+# def test_2():
+#     assert countX("hi") == 0
+
+# def test_3():
+#     assert countX("h") == 0
+
+# def test_4():
+#     assert countX("x") == 1
+
+# def test_5():
+#     assert countX("") == 0
+
+# def test_6():
+#     assert countX("hihi") == 0
+
+# def test_7():
+#     assert countX("hiAAhi12hi") == 0
+
+
+# 11-countHi
+def test_0():
+    assert countHi("xxhixx") == 1
+
+def test_1():
+    assert countHi("xhixhix") == 2
+
+def test_2():
+    assert countHi("hi") == 1
+
+def test_3():
+    assert countHi("hihih") == 2
+
+def test_4():
+    assert countHi("h") == 0
+
+def test_5():
+    assert countHi("") == 0
+
+def test_6():
+    assert countHi("ihihihihih") == 4
+
+def test_7():
+    assert countHi("ihihihihihi") == 5
+
+def test_8():
+    assert countHi("hiAAhi12hi") == 3
+
+def test_9():
+    assert countHi("xhixhxihihhhih") == 3
+
+def test_10():
+    assert countHi("ship") == 1
+
 
 # # 12-changeXY 
 # def test_0():
